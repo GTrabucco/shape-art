@@ -1,0 +1,5 @@
+<!-- app.component.html -->
+<app-menu (shapeSelected)="selectedShape = $event" (numberSelected)="numShapes = $event"
+    (generateArt)="generateArt = $event">
+</app-menu>
+<app-canvas [shape]="selectedShape" [numShapes]="numShapes" [generateArt]="generateArt"></app-canvas>

@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <legend>Select a shape</legend>
+                <div *ngFor="let shape of shapes">
+                    <input type="radio" (click)="selectShape(shape.value)" />
+                    <label [for]="shape.name">{{ shape.text }}</label>
+                    <br>
+                </div>
+            </li>
+            <li class="nav-item">
+                <legend>Number of shapes</legend>
+                <div>
+                    <input type="number" min="0" name="numShapes" [value]="numShapes" [(ngModel)]="numShapes"
+                        (change)="selectNumShapes()">
+                </div>
+            </li>
+            <li class="nav-item">
+                <div id="art-btn">
+                    <button type="button" class="btn btn-success" (click)="art()">Art!</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- <div class="col-md-4">
+    
+</div>
+<div class="col-md-4">
+    
+</div> -->
